@@ -23,6 +23,10 @@ replaceDict = {"Training" : "Get Training","New Job":"Get Hired","Volunteering":
 
 filename = 'file name'
 
+df = pd.read_csv('2017-01-26_DCDLWG.csv')
+df['Full Name'] = df.xs('First Name', axis=1) + " " + df.xs('Last Name', axis=1)
+df.to_csv('2017-01-26_DCDLWG.csv')
+
 dsdc = pd.read_csv(filename)
 
 def replaceVal(x):
@@ -63,6 +67,8 @@ import pandas as pd
 replaceDict = {"Training" : "Get Training","New Job":"Get Hired","Volunteering":"Volunteering","Teaching":"Give Training","Hiring":"Hiring","Speaking": "Event Speaking","Sponsoring":"Sponsoring","None":"None"}
 
 filename = ['file 1','file 2','file 3']
+
+
 
 concat_df = []
 
