@@ -68,7 +68,7 @@ concat_df = []
 
 for i in filename:
     dsdc = pd.read_csv(i)
-    columnNames = ["First Name","Last Name","Email","What may we help with?","May we contact you?"]
+    columnNames = ["Full Name","User ID","User Name",,"First Name","Last Name","Email","What may we help with?","May we contact you?" ]
     export_csv = pd.DataFrame()
     for y in columnNames:
         if y in dsdc.columns:
