@@ -28,10 +28,6 @@ replaceDict = {"Training" : "Get Training","New Job":"Get Hired","Volunteering":
 
 filename = 'file name'
 
-df = pd.read_csv('2017-01-26_DCDLWG.csv')
-df['Full Name'] = df.xs('First Name', axis=1) + " " + df.xs('Last Name', axis=1)
-df.to_csv('2017-01-26_DCDLWG.csv')
-
 dsdc = pd.read_csv(filename)
 
 def replaceVal(x):
